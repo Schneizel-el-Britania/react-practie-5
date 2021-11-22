@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CounterСontrol from '../CounterСontrol';
+import SetStep from '../SetStep';
+import ShowStep from '../ShowStep';
 import styles from './Counter.module.css'
 
 export default class Counter extends Component {
@@ -22,7 +24,7 @@ export default class Counter extends Component {
   changeDirection = () => this.setState({ direction: !this.state.direction })
 
   render() {
-    const { value, direction } = this.state;
+    const { step, value, direction } = this.state;
     return (
       <article className={styles.counter}>
         <p className={styles.value}>{value}</p>
@@ -31,6 +33,8 @@ export default class Counter extends Component {
           changeDirection={this.changeDirection}
           direction={direction}
         />
+        <ShowStep step={step} />
+        <SetStep setStep={this.setStep}/>
       </article>
     );
   }
