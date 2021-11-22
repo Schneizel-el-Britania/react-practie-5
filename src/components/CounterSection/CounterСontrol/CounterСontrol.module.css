@@ -1,0 +1,15 @@
+.stepBtn {
+  /* padding: 1rem; */
+}
+
+.directionBtn {
+  /* padding: 1rem; */
+}
+
+.increase {
+  background-color: green;
+}
+
+.decrease {
+  background-color: red;
+}

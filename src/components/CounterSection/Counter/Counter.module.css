@@ -1,0 +1,18 @@
+:root {
+  --counter-bg-color: #ebbe45;
+  --main-text-color: #3a1700;
+
+  font-size: 13px;
+}
+
+.counter {
+  width: 35vw;
+  background-color: var(--counter-bg-color);
+  text-align: center;
+  margin: auto;
+}
+
+.value {
+  color: var(--main-text-color);
+  font-size: 3rem;
+}
