@@ -6,15 +6,18 @@ export default class SetStep extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newStep: null,
+      newStep: this.basicStepValue,
     }
+    this.basicStepValue = 1;
   }
 
   handleForm = (event) => {
     event.preventDefault();
     this.props.setStep(this.state.newStep);
   }
-  handleInput = ({ target: { name, value } }) => this.setState({ [name]: Number(value) })
+  handleInput = ({ target: { name, value } }) => this.setState({ [name]: Number(value) || this.basicStepValue });
+
+  handleClearInput = () => this.inputField.value = '';
 
   render() {
     return (
@@ -23,7 +26,10 @@ export default class SetStep extends Component {
           type="text"
           onChange={this.handleInput}
           name="newStep"
+          value={this.state.newStep}
           placeholder="Enter new step"
+          ref={input => this.inputField = input}
+          onFocus={this.handleClearInput}
           className={styles.inputStep}
         ></input>
         <input
