@@ -5,23 +5,33 @@ import styles from './Counter.module.css'
 export default class Counter extends Component {
   constructor(props) {
     super(props);
-
-    this.value = 0;
+    this.state = {
+      value: 0,
+      step: 1,
+      direction: true,
+    }
   }
 
-  appendZeros = (num, len) => {
-    num = num.toString();
-    return (len - num.length > 0) ? new Array(len + 1 - num.length).join('0') + num : num;
-  };
-
-  // setStep = () => 
+  setValue = () => {
+    const { value, step, direction } = this.state;
+    this.setState({
+      value: direction ? value + step : value - step
+    });
+  }
+  setStep = (newStep) => this.setState({ step: newStep });
+  changeDirection = () => this.setState({ direction: !this.state.direction })
 
   render() {
+    const { value, direction } = this.state;
     return (
       <article className={styles.counter}>
-        <p className={styles.value}>{this.appendZeros(this.value, 4)}</p>
-        <CounterСontrol />
+        <p className={styles.value}>{value}</p>
+        <CounterСontrol
+          setValue={this.setValue}
+          changeDirection={this.changeDirection}
+          direction={direction}
+        />
       </article>
-    )
+    );
   }
 }
