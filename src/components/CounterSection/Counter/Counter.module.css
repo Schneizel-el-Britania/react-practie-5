@@ -1,15 +1,18 @@
 :root {
   --counter-bg-color: #ebbe45;
+  --additional-color: #e5e5e5;
   --main-text-color: #3a1700;
-
-  font-size: 13px;
+  --additional-text-color: #ffffff;
 }
 
 .counter {
   width: 35vw;
+  padding: 2rem;
+  margin: auto;
+
+  border-radius: calc(var(--border-radius) * 3);
   background-color: var(--counter-bg-color);
   text-align: center;
-  margin: auto;
 }
 
 .value {

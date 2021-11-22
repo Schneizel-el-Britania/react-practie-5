@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import classNames from 'classnames';
+import styles from './SetStep.module.css'
 
 export default class SetStep extends Component {
   constructor(props) {
@@ -7,7 +9,7 @@ export default class SetStep extends Component {
       newStep: null,
     }
   }
-  
+
   handleForm = (event) => {
     event.preventDefault();
     this.props.setStep(this.state.newStep);
@@ -17,8 +19,18 @@ export default class SetStep extends Component {
   render() {
     return (
       <form onSubmit={this.handleForm}>
-        <input type="text" onChange={this.handleInput} name="newStep" placeholder="Enter new step"></input>
-        <input type="submit" value="set value"></input>
+        <input
+          type="text"
+          onChange={this.handleInput}
+          name="newStep"
+          placeholder="Enter new step"
+          className={styles.inputStep}
+        ></input>
+        <input
+          type="submit"
+          value="Set value"
+          className={classNames('button', styles.submit)}
+        ></input>
       </form>
     )
   }

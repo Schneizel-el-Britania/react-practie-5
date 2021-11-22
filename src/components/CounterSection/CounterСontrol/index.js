@@ -13,15 +13,14 @@ export default class CounterControl extends Component {
 
     const directionBtnClasses = classNames(
       'button',
-      styles.directionBtn,
       direction ? styles.increase : styles.decrease,
     );
 
     return (
-      <>
+      <div className={styles.btnContainer}>
         <button className={addBtnClasses} onClick={setValue} >{direction ? 'increase' : 'decrease'}</button>
         <button className={directionBtnClasses} onClick={changeDirection} >change</button>
-      </>
+      </div>
     )
   }
 }

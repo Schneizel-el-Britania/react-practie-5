@@ -34,7 +34,7 @@ export default class Counter extends Component {
           direction={direction}
         />
         <ShowStep step={step} />
-        <SetStep setStep={this.setStep}/>
+        <SetStep setStep={this.setStep} />
       </article>
     );
   }

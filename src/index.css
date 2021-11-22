@@ -1,5 +1,7 @@
 :root {
   --bg-pg-color: #282c34;
+  --border-radius: 10px;
+  font-size: 13px;
 }
 
 body {
@@ -10,6 +12,16 @@ body {
   background-color: var(--bg-pg-color);
 }
 
-.button{
-  padding: 1rem;
+.button {
+  width: 15%;
+  padding: 0.5rem 0;
+
+  border: none;
+  border-radius: var(--border-radius);
+}
+.button:hover {
+  filter: brightness(80%);
+}
+.button::first-letter{
+  text-transform: uppercase;
 }

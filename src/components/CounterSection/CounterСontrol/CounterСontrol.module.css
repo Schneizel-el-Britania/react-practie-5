@@ -1,15 +1,23 @@
-.stepBtn {
-  /* padding: 1rem; */
+.btnContainer {
+  --increase-color: #69c424;
+  --decrease-color: #d32a41;
+
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-.directionBtn {
-  /* padding: 1rem; */
+.stepBtn {
+  color: var(--main-text-color);
+  margin-right: 5%;
+  background-color: var(--additional-color);
 }
 
 .increase {
-  background-color: green;
+  color: var(--main-text-color);
+  background-color: var(--increase-color);
 }
 
 .decrease {
-  background-color: red;
+  color: var(--additional-text-color);
+  background-color: var(--decrease-color);
 }
