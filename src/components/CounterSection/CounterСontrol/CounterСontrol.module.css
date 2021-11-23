@@ -1,23 +1,18 @@
 .btnContainer {
-  --increase-color: #69c424;
-  --decrease-color: #d32a41;
-
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 
 .stepBtn {
-  color: var(--main-text-color);
   margin-right: 5%;
   background-color: var(--additional-color);
 }
 
 .increase {
-  color: var(--main-text-color);
-  background-color: var(--increase-color);
+  background-color: var(--active-btn-color);
 }
 
 .decrease {
   color: var(--additional-text-color);
-  background-color: var(--decrease-color);
+  background-color: var(--inactive-btn-color);
 }

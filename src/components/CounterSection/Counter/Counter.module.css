@@ -1,9 +1,10 @@
 :root {
   --counter-bg-color: #ebbe45;
   --additional-color: #e5e5e5;
-  --main-text-color: #3a1700;
   --additional-text-color: #ffffff;
   --value-selection-color: #ebd69c;
+  --active-btn-color: #69c424;
+  --inactive-btn-color: #d32a41;
 }
 
 .counter {
@@ -19,6 +20,9 @@
   text-align: center;
 
   position: relative;
+}
+.counter *::selection {
+  background-color: var(--value-selection-color);
 }
 
 .counterWrapper {
@@ -53,9 +57,5 @@
 }
 
 .value {
-  color: var(--main-text-color);
   font-size: 3rem;
-}
-.value::selection {
-  background-color: var(--value-selection-color);
 }

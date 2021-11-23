@@ -5,12 +5,8 @@
   border-radius: calc(var(--border-radius) / 2);
   background-color: var(--additional-color);
 }
-.inputStep::placeholder {
-  color: var(--main-text-color);
-}
 
 .submit {
-  --submit-color: #69c424;
   margin-left: 2%;
-  background-color: var(--submit-color);
+  background-color: var(--active-btn-color);
 }

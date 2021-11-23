@@ -1,0 +1,41 @@
+.autoClick {
+  margin-top: 1rem;
+  margin-left: 20%;
+  text-align: left;
+}
+
+.timerContainer > * {
+  display: inline;
+}
+.timerContainer > * + * {
+  margin-left: 2%;
+}
+
+.showSettingsBtn {
+  width: 15px;
+  height: 15px;
+
+  background-color: transparent;
+  border: none;
+
+  background-image: url("./arrowBtn.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rotateBtn {
+  transform: rotate(90deg);
+}
+
+.autoClickBtn {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  background-color: var(--active-btn-color);
+  border: none;
+}
+
+.description {
+  vertical-align: -50%;
+}
