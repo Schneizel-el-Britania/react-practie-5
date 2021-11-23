@@ -3,6 +3,7 @@
   --additional-color: #e5e5e5;
   --main-text-color: #3a1700;
   --additional-text-color: #ffffff;
+  --value-selection-color: #ebd69c;
 }
 
 .counter {
@@ -12,13 +13,12 @@
   width: 35vw;
   padding: 2rem;
   margin: 1rem auto;
-  
+
   border-radius: calc(var(--border-radius) * 3);
   background-color: var(--counter-bg-color);
   text-align: center;
 
   position: relative;
-
 }
 
 .counterWrapper {
@@ -55,4 +55,7 @@
 .value {
   color: var(--main-text-color);
   font-size: 3rem;
+}
+.value::selection {
+  background-color: var(--value-selection-color);
 }

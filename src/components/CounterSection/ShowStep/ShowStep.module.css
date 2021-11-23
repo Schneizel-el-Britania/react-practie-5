@@ -1,7 +1,11 @@
 .currentStep {
   padding-bottom: 1.5rem;
   color: var(--main-text-color);
+  cursor: default;
 }
 .currentStep::first-letter {
   text-transform: uppercase;
+}
+.currentStep::selection {
+  background-color: transparent;
 }
