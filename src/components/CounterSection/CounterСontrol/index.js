@@ -1,10 +1,9 @@
 import classNames from 'classnames';
-import React, { Component } from 'react'
+import React from 'react'
 import styles from './CounterСontrol.module.css'
 
-export default class CounterControl extends Component {
-  render() {
-    const { setValue, changeDirection, direction } = this.props;
+export default function CounterControl(props) {
+    const { setValue, changeDirection, direction } = props;
 
     const addBtnClasses = classNames(
       'button',
@@ -22,5 +21,4 @@ export default class CounterControl extends Component {
         <button className={directionBtnClasses} onClick={changeDirection} >change</button>
       </div>
     )
-  }
 }
