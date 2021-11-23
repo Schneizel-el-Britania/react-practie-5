@@ -15,10 +15,10 @@ export default class Counter extends Component {
     }
   }
 
-  setValue = () => {
-    const { value, step, direction } = this.state;
+  setValue = (step = this.state.step) => {
+    const { value, direction } = this.state;
     this.setState({
-      value: direction ? value + step : value - step
+      value: direction ? value + Number(step) : value - Number(step)
     });
   }
   setStep = (newStep) => this.setState({ step: newStep });
@@ -37,7 +37,7 @@ export default class Counter extends Component {
           />
           <ShowStep step={step} />
           <UpdateStep setStep={this.setStep} />
-          <AutoClick />
+          <AutoClick step={step} setValue={this.setValue} />
         </div>
       </article>
     );

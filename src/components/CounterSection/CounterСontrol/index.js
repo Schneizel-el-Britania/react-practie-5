@@ -17,7 +17,7 @@ export default function CounterControl(props) {
 
     return (
       <div className={styles.btnContainer}>
-        <button className={addBtnClasses} onClick={setValue} >{direction ? 'increase' : 'decrease'}</button>
+        <button className={addBtnClasses} onClick={()=>setValue()} >{direction ? 'increase' : 'decrease'}</button>
         <button className={directionBtnClasses} onClick={changeDirection} >change</button>
       </div>
     )

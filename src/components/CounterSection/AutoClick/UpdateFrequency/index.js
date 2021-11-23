@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './UpdateFrequency.module.css'
-import rangeOptions from '../options.json'
+import { min, max } from '../options.json'
 
 export default function UpdateFrequency(props) {
   const { frequency, setFrequency } = props;
-  const { min, max, step } = rangeOptions;
   const handleChange = ({ target: { value } }) => setFrequency(value);
 
   return (
@@ -15,7 +14,7 @@ export default function UpdateFrequency(props) {
           type="range"
           className={styles.frequencyRange}
           onChange={handleChange}
-          min={min} max={max} step={step}
+          min={min} max={max} step={props.step}
           defaultValue={frequency}
         ></input>
         <p className={styles.currentFrequency}>{frequency}s</p>
