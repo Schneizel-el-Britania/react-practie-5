@@ -14,8 +14,8 @@
 }
 
 .showSettingsBtn {
-  width: 15px;
-  height: 15px;
+  padding-top: 1rem;
+  padding-left: 1rem;
 
   background-color: transparent;
   border: none;
@@ -34,10 +34,10 @@
   height: 25px;
 
   border-radius: 50%;
-  background-color: var(--active-btn-color);
+  background-color: var(--inactive-btn-color);
   border: none;
 }
 
-.description {
-  vertical-align: -50%;
+.activeState {
+  background-color: var(--active-btn-color);
 }

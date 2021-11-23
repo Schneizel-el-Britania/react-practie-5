@@ -1,11 +1,6 @@
 import React from 'react';
 import styles from './UpdateFrequency.module.css'
-
-const rangeOptions = {
-  min: 0,
-  max: 60,
-  step: 1,
-}
+import rangeOptions from '../options.json'
 
 export default function UpdateFrequency(props) {
   const { frequency, setFrequency } = props;
