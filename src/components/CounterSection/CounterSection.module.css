@@ -1,0 +1,13 @@
+.counterSecHeader {
+  margin: 2rem 0;
+
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.counterContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,10 +1,13 @@
-
 import './App.css';
 import CounterSection from './components/CounterSection';
 
 function App() {
   return (
-   <CounterSection />
+    <>
+      <h1 className="mainHeader">React Practice</h1>
+      <CounterSection />
+    </>
+
   );
 }
 

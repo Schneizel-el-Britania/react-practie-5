@@ -25,3 +25,19 @@ body {
 .button::first-letter{
   text-transform: uppercase;
 }
+
+.mainHeader {
+  margin: 3rem 0;
+
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.sectionHeader {
+  margin: 2rem 0;
+
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
