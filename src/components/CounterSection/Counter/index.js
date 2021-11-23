@@ -27,14 +27,16 @@ export default class Counter extends Component {
     const { step, value, direction } = this.state;
     return (
       <article className={styles.counter}>
-        <p className={styles.value}>{value}</p>
-        <CounterСontrol
-          setValue={this.setValue}
-          changeDirection={this.changeDirection}
-          direction={direction}
-        />
-        <ShowStep step={step} />
-        <SetStep setStep={this.setStep} />
+        <div className={styles.counterWrapper}>
+          <p className={styles.value}>{value}</p>
+          <CounterСontrol
+            setValue={this.setValue}
+            changeDirection={this.changeDirection}
+            direction={direction}
+          />
+          <ShowStep step={step} />
+          <SetStep setStep={this.setStep} />
+        </div>
       </article>
     );
   }
