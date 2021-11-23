@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import classNames from 'classnames';
-import styles from './SetStep.module.css'
+import styles from './UpdateStep.module.css'
 
-export default class SetStep extends Component {
+export default class UpdateStep extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      newStep: this.basicStepValue,
+      newStep: null,
     }
     this.basicStepValue = 1;
   }
 
   handleForm = (event) => {
     event.preventDefault();
-    this.props.setStep(this.state.newStep);
+    this.props.setStep(this.state.newStep || this.basicStepValue);
+    this.setState({ newStep: null });
   }
   handleInput = ({ target: { name, value } }) => this.setState({ [name]: Number(value) || this.basicStepValue });
-
   handleClearInput = () => this.inputField.value = '';
 
   render() {

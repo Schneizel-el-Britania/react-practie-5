@@ -20,7 +20,7 @@ body {
   border-radius: var(--border-radius);
 }
 .button:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
 }
 .button::first-letter{
   text-transform: uppercase;

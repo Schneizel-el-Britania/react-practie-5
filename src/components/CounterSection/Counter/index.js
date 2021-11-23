@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AutoClick from '../AutoClick';
 import CounterСontrol from '../CounterСontrol';
-import SetStep from '../SetStep';
+import UpdateStep from '../UpdateStep';
 import ShowStep from '../ShowStep';
 import styles from './Counter.module.css'
 
@@ -36,7 +36,7 @@ export default class Counter extends Component {
             direction={direction}
           />
           <ShowStep step={step} />
-          <SetStep setStep={this.setStep} />
+          <UpdateStep setStep={this.setStep} />
           <AutoClick />
         </div>
       </article>
