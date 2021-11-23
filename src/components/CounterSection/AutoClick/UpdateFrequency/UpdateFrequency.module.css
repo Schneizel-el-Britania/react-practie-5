@@ -1,0 +1,13 @@
+.frequencyContainer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: stretch;
+}
+.frequencyContainer > * + * {
+  margin-left: var(--spaces);
+}
+
+.currentFrequency {
+  margin-top: 0.5rem;
+  text-align: center;
+}

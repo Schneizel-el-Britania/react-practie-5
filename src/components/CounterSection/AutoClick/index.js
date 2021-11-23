@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SetFrequency from './SetFrequency';
+import UpdateFrequency from './UpdateFrequency';
 import styles from './AutoClick.module.css'
 import classNames from 'classnames';
 
@@ -16,6 +16,7 @@ export default class AutoClick extends Component {
   }
 
   showSettings = () => this.setState({ enableSettings: !this.state.enableSettings });
+  setFrequency = (newFrequency) => this.setState({ frequency: newFrequency });
 
   render() {
     const { frequency, step, duration, enableSettings } = this.state;
@@ -26,13 +27,13 @@ export default class AutoClick extends Component {
     )
 
     return (
-      <div className={styles.autoClick}>
+      <div className={styles.autoClickContainer}>
         <div className={styles.timerContainer}>
           <button className={settingBtnClasses} onClick={this.showSettings}></button>
           <button className={styles.autoClickBtn}></button>
           <p className={styles.description}>Time left: {duration}</p>
         </div>
-        {enableSettings ? <SetFrequency /> : undefined}
+        {enableSettings ? <UpdateFrequency frequency={frequency} setFrequency={this.setFrequency} /> : undefined}
       </div>
     )
   }
